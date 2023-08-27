@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="stylesheet" href="/src/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <title>Face filter</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="facemask">
+        <video id="video" class="video-feed" autoplay muted width="640" height="480"></video>
+        <canvas id="canvas" class="animation-canvas"></canvas>
+      </section>
+
+      <form id="form" class="config-form">
+        <h2>Konfiguracja:</h2>
+          <label>
+            Refine landmarks:
+          <input type="checkbox" name="refineLandmarks" value="true" />
+          </label>
+
+        <label>
+          Kolor obrysu twarzy
+        <input name="faceOvalColor" type="color" value="#FFFFFF"/>
+        </label>
+
+        <label>
+          Kolor brwi
+          <input name="eyebrowColor" type="color" value="#FFFFFF"/>
+        </label>
+
+        <label>
+          Kolor oka
+          <input name="eyeColor" type="color" value="#FFFFFF"/>
+        </label>
+
+        <label>
+          Kolor ust
+          <input name="lipsColor" type="color" value="#FFFFFF"/>
+        </label>
+
+        <label>
+          Kolor kropek
+          <input name="dotsColor" type="color" value="#FFFFFF"/>
+        </label>
+
+        <label>
+          Kolor zrenic
+          <input name="irisColor" type="color" value="#FFFFFF"/>
+        </label>
+
+        <button type="button" onclick="window.saveConfig()">Zastosuj</button>
+      </form>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

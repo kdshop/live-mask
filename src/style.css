@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+  background: linear-gradient(20deg,#42c0dc 35%,#02548e 64%,#02548e 79%,#0e7aa0 100%);
+}
+
+.animation-canvas {
+  border: 1px solid white;
+  cursor: grab;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+.video-feed {
+  position: relative;
+  z-index: 1;
+}
+
+.facemask::after {
+  position: absolute;
+  top: 50%;
+  left: 33%;
+  content: "Oczekiwanie na obraz z kamery...";
+  z-index: 0;
+}
+
+.facemask {
+  position: relative;
+}
+
+.config-form {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  justify-self: start;
+}
+.config-form > label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+}
+
+.config-form > button {
+  margin-top: 15px;
+}

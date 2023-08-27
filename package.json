@@ -1,0 +1,25 @@
+{
+  "name": "matrix-face",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@mediapipe/drawing_utils": "^0.3.1620248257",
+    "@mediapipe/face_detection": "~0.4.0",
+    "@tensorflow-models/blazeface": "^0.0.7",
+    "@tensorflow-models/face-landmarks-detection": "^1.0.1",
+    "@tensorflow/tfjs-backend-webgl": "^3.14.0",
+    "@tensorflow/tfjs-converter": "^3.14.0",
+    "@tensorflow/tfjs-core": "^3.14.0",
+    "three": "^0.142.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.142.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4",
+    "vite": "^3.0.3"
+  }
+}
