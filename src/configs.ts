@@ -71,15 +71,8 @@ export function saveAppConfig(
     const config: Record<string, string | boolean> = {};
     const formData = new FormData(htmlConfigFormElement);
 
-    formData.forEach((value, key) => {
-      if ("refineLandmarks" === key) {
-        config[key] = value === "true";
-
-        return;
-      }
-
-      config[key] = value.toString();
-    });
+    formData.forEach((value, key) => (config[key] = value.toString()));
+    config["refineLandmarks"] = formData.get("refineLandmarks") === "true";
 
     window.localStorage.setItem(
       LS_KEY,
